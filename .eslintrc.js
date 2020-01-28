@@ -1,33 +1,36 @@
 module.exports = {
   env: {
-    es6: true
+    es6: true,
   },
-  extends: ["plugin:react/recommended", "airbnb", "prettier/react"],
+  extends: ['plugin:react/recommended', 'airbnb', 'prettier/react'],
   globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
   },
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 2018,
-    sourceType: "module"
+    sourceType: 'module',
   },
-  plugins: ["react", "prettier"],
+  plugins: ['react', 'prettier', 'react-hooks'],
   rules: {
-    "linebreak-style": ["error", "windows"],
-    "linebreak-style": 0,
-    "prettier/prettier": "error",
-    "react/jsx-filename-extension": [
-      "warn",
+    'linebreak-style': ['error', 'windows'],
+    'linebreak-style': 0,
+    'prettier/prettier': 'error',
+    'react/jsx-filename-extension': [
+      'warn',
       {
-        extensions: [".jsx", ".js"]
-      }
+        extensions: ['.jsx', '.js'],
+      },
     ],
-    "import/prefer-default-export": "off",
-    "no-param-reassign": "off",
-    "no-console": ["error", { allow: ["tron"] }]
-  }
+    'import/prefer-default-export': 'off',
+    'no-param-reassign': 'off',
+    'no-console': ['error', { allow: ['tron'] }],
+
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+  },
 };
