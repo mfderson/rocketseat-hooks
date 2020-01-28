@@ -1,3 +1,16 @@
+## Bibliotecas a serem instaladas
+
+### Eslint com React Hooks
+Com isso o eslint mostrará os erros se utilizarmos a nova api do react de forma errada.
+`yarn add eslint-plugin-react-hooks -D`
+
+Adicione o .eslintrc.js na tag de **plugins**:
+`react-hooks`
+
+Adicione ao .eslintrc.js na tag **rules**:
+`'react-hooks/rules-of-hooks': 'error',
+ 'react-hooks/exhaustive-deps': 'warn'`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
