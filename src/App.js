@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 
 function App() {
   // O primeiro parâmetro é o nome da variável que armazenará o estada
@@ -6,10 +6,10 @@ function App() {
   const [tech, setTech] = useState(['ReactJS', 'ReactNative']);
   const [newTech, setNewTech] = useState('');
 
-  function handleAdd() {
+  const handleAdd = useCallback(() => {
     setTech([...tech, newTech]);
     setNewTech('');
-  }
+  }, [newTech, tech]);
 
   // A função será executada apenas uma vez, dado que o segundo parâmetro
   // é um array vazio.
